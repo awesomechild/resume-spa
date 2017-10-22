@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Resume Maker</title>
+
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/resume-one.css">
+  <link rel="stylesheet" href="css/resume-two.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+   <!-- material design -->
+  <link rel="stylesheet" href="css/angular-material.min.css">
+   <!-- material design -->
+
+  <script>
+    $(window).load(function() {
+    //   loading animation : balls.gif
+      $(".se-pre-con").fadeOut("fast");;
+    });
+  </script>
+</head>
+<body>
+  <div class="se-pre-con"></div>
+
+  <div ng-app="cvApp"
+       ng-controller="tabCtrl as tabCtrl"
+       layout="column" class="mainApp" style="background-color:#F5F0EE" ng-cloak>
+    <div class="stickyHeader">
+      <md-toolbar md-colors="{background: 'deep-purple'}" id="top_toolbar" class="mainToolbar">
+        <h2 class="md-toolbar-tools" style="background-color:#521508" layout-align="center center">
+          <span class="nameHeader"><a href="#/home">Résumé</a></span>
+        </h2>
+      </md-toolbar>
+    </div>
+    <div class="stickyContent">
+        <!-- unnamed view addressed here -->
+      <div id="content" ui-view flex> </div>
+      <!-- home view -->
+      <div id="content" ui-view="home" flex> </div>
+
+      <div id="content" ui-view="summary" flex> </div>
+      <div id="content" ui-view="basicinfo" flex> </div>
+      <div id="content" ui-view="experiences" flex> </div>
+      <div id="content" ui-view="projects" flex> </div>
+
+
+      <div id="content" ui-view="education" flex> </div>
+      <div id="content" ui-view="skill" flex> </div>
+      <div id="content" ui-view="download" flex> </div>
+
+
+
+    </div>
+    <footer>
+        <div layout="row" layout-align="center center" style="background-color:#521508">
+            <p>Contact Us</a></p>
+        </div>
+    </footer>
+  </div>
+
+  <script src="js/angular.js"></script>
+  <script src="js/angular-sanitize.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+  <script src="js/svg-assets-cache.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <script src="js/angular-material.js"></script>
+  <script src="app.js"></script>
+
+  <script src="services/toastService.js"></script>
+  <script src="services/utilService.js"></script>
+
+  <script src="controllers/tabCtrl.js"></script>
+  <script src="controllers/experienceCtrl.js"></script>
+  <script src="controllers/projectsCtrl.js"></script>
+  <script src="controllers/educationCtrl.js"></script>
+  <script src="controllers/skillsCtrl.js"></script>
+  <script src="controllers/downloadCtrl.js"></script>
+
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

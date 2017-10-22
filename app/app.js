@@ -4,12 +4,18 @@ cvApp.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider
-    .state('view1', {
+
+    .state('view0', {
         url: "/home",
         views: {
-                "home": {
-                    templateUrl: "partials/home.html"
-                },
+            "home":{
+                templateUrl: "partials/home.html"
+            }
+        }
+    })
+    .state('view1', {
+        url: "/summary",
+        views: {
                 "summary": {
                     templateUrl: "partials/summary.html"
                 },

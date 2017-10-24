@@ -7,6 +7,14 @@
   padding: 0 0 0.5em;
 }
 
+
+.container{
+    width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+}
 .menu:before {
   content: "[";
 }
@@ -60,7 +68,8 @@
 }
 
 .splash-header{
-  background-color: #87411C;
+    background:url('/images/header.jpg') no-repeat;
+
 }
 
 .feature-icon{

@@ -28,15 +28,14 @@
     <input type="hidden" ng-model="projectsList.id">
 
 
-    <!-- when save button click is pressed it calls educationList.addEducation method   
+    <!-- when save button click is pressed it calls educationList.addEducation method
     which does not take any arguments because of two way binding that we have already done -->
-    <md-button class="md-raised md-primary" ng-click="educationList.addEducation()" style="background-color:#521508">Save</md-button>
+    <md-button class="md-raised md-primary" ng-click="educationList.addEducation()" style="background-color:#50617C">Save</md-button>
     <!-- ends here -->
 
 
-    <md-button class="md-raised md-primary" href="#/skills" style="background-color:#87411C">Next ➔</md-button>
   </div>
-  <md-toolbar class="md-theme-light" style="background-color:#521508">
+  <md-toolbar class="md-theme-light" style="background-color:#415E8B">
     <h2 class="md-toolbar-tools">
       <span>Your Degrees</span>
     </h2>
@@ -55,7 +54,7 @@
           <input type="hidden" value="{{education.id}}">
         </div>
 
-        <!-- for edition something that has been added before click on edit button that fires up 
+        <!-- for edition something that has been added before click on edit button that fires up
         bind selected education method -->
         <md-button class="md-secondary" ng-click="educationList.bindSelectedEducation(education)" md-colors="{background: 'deep-purple'}">Edit</md-button>
         <md-button class="md-secondary" ng-click="educationList.removeEducation(education)" md-colors="{background: 'red'}">Remove</md-button>
